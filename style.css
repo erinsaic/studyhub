@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e6ebf7;
+
+    background-image: url("./download.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: #0d1b2a;
+
+    margin: 0;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    background-color: #e6ebf7;
+    background-image: url("./download.png");
+
+    color: #0d1b2a;
+}
+
+body.dark .card {
+    background-color: #0d1b2a;
+    color: #ffffff;
+}
+
+/* Study Planner stays Light Mode color */
+body.dark h1 {
+    color: #0d1b2a;
+}
+
+body.dark .subtitle {
+    color: #1c2a4a;
+}
+
+/* Card headings become white */
+body.dark .section-heading h2,
+body.dark .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .section-description {
+    color: #ffffff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    width: 100%;
+    max-width: 650px;
+
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+
+    margin: 0;
+
+    color: #0d1b2a;
+}
+
+.subtitle {
+    font-size: 15px;
+
+    margin-top: 5px;
+
+    color: #1c2a4a;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    background-color: #1c2a4a;
+
+    color: #e6ebf7;
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background-color: #0d1b2a;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   TOP CONTROLS
+========================= */
+
+.top-controls {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+#search-tasks {
+    width: 100%;
+    max-width: 420px;
+
+    margin-top: 15px;
+
+    padding: 10px 14px;
+
+    border: 1px solid #c9d4ea;
+
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    color: #0d1b2a;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+#search-tasks:focus {
+    border-color: #1c2a4a;
+}
+
+body.dark #search-tasks {
+    background-color: #1c2a4a;
+
+    border-color: #3b4f78;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-wrap {
+    width: 100%;
+    max-width: 420px;
+
+    height: 7px;
+
+    margin: 18px auto 6px;
+
+    background-color: #c9d4ea;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background-color: #1c2a4a;
+
+    transition: width 0.3s ease;
+}
+
+#progress-text {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #1c2a4a;
+}
+
+body.dark #progress-text {
+    color: #1c2a4a;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 100%;
+    max-width: 650px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    width: 100%;
+
+    background-color: #e6ebf7;
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    color: #0d1b2a;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-title,
+.section-heading {
+    margin-bottom: 15px;
+}
+
+.section-heading h2,
+.section-title h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #0d1b2a;
+}
+
+.section-description {
+    margin: 3px 0 0;
+
+    font-size: 12px;
+
+    color: #1c2a4a;
+}
+
+
+/* =========================
+   SUBJECTS
+========================= */
+
+.subjects-list {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+}
+
+.subjects-list li {
+    padding: 9px 11px;
+
+    border-radius: 7px;
+
+    background-color:
+        rgba(255, 255, 255, 0.06);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+.task-list {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0 0 15px;
+}
+
+.task-list:empty {
+    display: none;
+}
+
+
+/* =========================
+   TASK
+========================= */
+
+.task {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 10px;
+
+    margin-bottom: 7px;
+
+    border-radius: 9px;
+
+    background-color:
+        rgba(255, 255, 255, 0.055);
+
+    transition: background-color 0.2s ease;
+}
+
+.task:hover {
+    background-color:
+        rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.task-checkbox {
+    width: 19px;
+    height: 19px;
+
+    margin: 0;
+
+    accent-color: #e6ebf7;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TASK CONTENT
+========================= */
+
+.task-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.task-name {
+    font-size: 14px;
+
+    font-weight: 500;
+
+    /* DARK BLUE IN LIGHT MODE */
+    color: #0d1b2a;
+
+    word-wrap: break-word;
+}
+
+/* WHITE IN DARK MODE */
+body.dark .task-name {
+    color: #ffffff;
+}
+
+.task-name.completed {
+    text-decoration: line-through;
+
+    opacity: 0.45;
+}
+
+
+/* =========================
+   SUBJECT LABEL
+========================= */
+
+.task-subject {
+    display: inline-block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+    color: #1c2a4a;
+
+    text-transform: uppercase;
+}
+
+body.dark .task-subject {
+    color: #c9d4ea;
+}
+
+
+/* =========================
+   NOTES
+========================= */
+
+.task-notes {
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    color: #1c2a4a;
+
+    font-style: italic;
+
+    word-wrap: break-word;
+}
+
+body.dark .task-notes {
+    color: #aebbd5;
+}
+
+
+/* =========================
+   PRIORITY
+========================= */
+
+.priority {
+    font-size: 9px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    padding: 4px 7px;
+
+    border-radius: 5px;
+
+    flex-shrink: 0;
+}
+
+.priority.high {
+    background-color: #0d1b2a;
+
+    color: #e6ebf7;
+}
+
+.priority.medium {
+    background-color: #2a3b66;
+
+    color: #e6ebeb;
+}
+
+.priority.low {
+    background-color: #3a4d75;
+
+    color: #e6ebeb;
+}
+
+
+/* =========================
+   DELETE
+========================= */
+
+.remove-task {
+    background: none;
+
+    padding: 3px 5px;
+
+    margin: 0;
+
+    color: #8f9bb3;
+
+    font-size: 16px;
+
+    border-radius: 5px;
+}
+
+.remove-task:hover {
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    transform: none;
+}
+
+
+/* =========================
+   ADD TASK
+========================= */
+
+.add-task-box {
+    padding-top: 5px;
+}
+
+.add-task-box > input {
+    width: 100%;
+}
+
+.task-input-row {
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: 6px;
+}
+
+.task-input-row input {
+    flex: 1;
+}
+
+.task-input-row select {
+    width: 125px;
+}
+
+.task-input-row button {
+    white-space: nowrap;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input[type="text"],
+select {
+    padding: 9px 11px;
+
+    border-radius: 7px;
+
+    border: 1px solid #526486;
+
+    background-color: #16233f;
+
+    color: #ffffff;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+input[type="text"]::placeholder {
+    color: #8998b5;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #9aabd0;
+}
+
+
+/* =========================
+   POMODORO / FOCUS MODE
+========================= */
+
+.focus-card {
+    text-align: center;
+}
+
+#timer-mode {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #0d1b2a;
+}
+
+#timer {
+    margin: 10px 0 15px;
+
+    font-size: 65px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #0d1b2a;
+}
+
+body.dark #timer-mode,
+body.dark #timer {
+    color: #ffffff;
+}
+
+.timer-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+}
+
+.timer-buttons button {
+    min-width: 90px;
+}
+
+#session-count {
+    margin: 15px 0 0;
+
+    font-size: 12px;
+
+    color: #1c2a4a;
+}
+
+body.dark #session-count {
+    color: #aebbd5;
+}
+
+
+/* =========================
+   GOALS
+========================= */
+
+/* Goal text in Light Mode */
+.goal,
+.goal-name,
+.goal-text {
+    color: #0d1b2a;
+}
+
+/* Goal text in Dark Mode */
+body.dark .goal,
+body.dark .goal-name,
+body.dark .goal-text {
+    color: #ffffff;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .card {
+        padding: 20px;
+
+        border-radius: 13px;
+    }
+
+    .subjects-list {
+        grid-template-columns: 1fr;
+    }
+
+    .task {
+        padding: 11px 8px;
+
+        gap: 8px;
+    }
+
+    .task-name {
+        font-size: 13px;
+    }
+
+    .task-subject {
+        font-size: 9px;
+    }
+
+    .priority {
+        font-size: 8px;
+
+        padding: 3px 5px;
+    }
+
+    .task-input-row {
+        flex-wrap: wrap;
+    }
+
+    .task-input-row input {
+        width: 100%;
+
+        flex-basis: 100%;
+    }
+
+    .task-input-row select {
+        flex: 1;
+
+        width: auto;
+    }
+
+    .task-input-row button {
+        flex: 1;
+    }
+
+    #timer {
+        font-size: 50px;
+    }
+
+    .timer-buttons button {
+        font-size: 13px;
+
+        min-width: 85px;
+    }
+}

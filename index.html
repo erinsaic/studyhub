@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Erin's Study Planner</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Erin's Study Planner</h1>
+
+    <p class="subtitle">
+        Planner for !st Sem SY. 26-27
+    </p>
+
+    <div class="top-controls">
+        <button id="toggle-theme">
+            🌙 Dark Mode
+        </button>
+    </div>
+
+    <input
+        type="text"
+        id="search-tasks"
+        placeholder="Search tasks..."
+    >
+
+    <div class="progress-wrap">
+        <div id="progress-bar"></div>
+    </div>
+
+    <p id="progress-text">
+        0% completed
+    </p>
+
+</header>
+
+
+<main
+
+    <section class="card">
+
+        <div class="section-title">
+            <h2>List of Courses</h2>
+        </div>
+
+        <ul class="subjects-list">
+
+            <li>Chemistry for Engineers</li>
+
+            <li>Calculus 1</li>
+
+            <li>Math in the Modern World</li>
+
+            <li>Computer Fundamentals and Programming</li>
+
+            <li>Filipinohiya</li>
+            
+            <li>Introduction to Industrial Engineering</li>
+
+            <li>Pathfit 1</li>
+
+            <li>CWTS</li>
+
+        </ul>
+
+    </section>
+
+
+    <section class="card focus-card">
+
+        <div class="section-title">
+            <h2>Focus Mode</h2>
+        </div>
+
+        <p id="timer-mode">
+            Focus Session
+        </p>
+
+        <div id="timer">
+            25:00
+        </div>
+
+        <div class="timer-buttons">
+
+            <button id="start-timer">
+                ▶ Start
+            </button>
+
+            <button id="pause-timer">
+                ⏸ Pause
+            </button>
+
+            <button id="reset-timer">
+                ↻ Reset
+            </button>
+
+        </div>
+
+        <p id="session-count">
+            Sessions completed: 0
+        </p>
+
+    </section>
+
+
+    <section class="card task-card">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>Tasks</h2>
+
+                <p class="section-description">
+                    Keep track of your school tasks.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <ul
+            id="homework"
+            class="task-list"
+        ></ul>
+
+
+
+        <div class="add-task-box">
+
+    
+
+            <input
+                type="text"
+                id="new-homework"
+                placeholder="What do you need to do?"
+            >
+
+
+            <div class="task-input-row">
+                
+
+                <select id="hw-subject">
+
+                    <option
+                        value=""
+                        selected
+                        disabled
+                    >
+                        Select subject
+                    </option>
+
+                    <option value="Chemistry for Engineers">
+                        Chemistry for Engineers
+                    </option>
+
+                    <option value="Calculus 1">
+                        Calculus 1
+                    </option>
+
+                    <option value="Math in the Modern World">
+                        Math in the Modern World
+                    </option>
+
+                    <option value="Computer Fundamentals and Programming">
+                        Computer Fundamentals and Programming
+                    </option>
+
+                    <option value="Filipinohiya">
+                        Filipinohiya
+                    </option>
+
+                    <option value="Introduction to Industrial Engineering">
+                         Introduction to Industrial Engineering
+                    </option>
+
+                    <option value="Pathfit 1">
+                        Pathfit 1
+                    </option>
+
+                    <option value="CWTS">
+                        CWTS
+                    </option>
+
+                </select>
+
+
+                <!-- NOTES -->
+
+                <input
+                    type="text"
+                    id="hw-notes"
+                    placeholder="Add notes"
+                >
+
+
+                <!-- PRIORITY -->
+
+                <select id="hw-priority">
+
+                    <option value="high">
+                        High
+                    </option>
+
+                    <option
+                        value="medium"
+                        selected
+                    >
+                        Medium
+                    </option>
+
+                    <option value="low">
+                        Low
+                    </option>
+
+                </select>
+
+
+                <!-- ADD BUTTON -->
+
+                <button id="add-homework">
+                    + Add
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GOALS
+    ========================== -->
+
+    <section class="card task-card">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>Goals Today</h2>
+
+                <p class="section-description">
+                    Small goals for today.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GOALS LIST -->
+
+        <ul
+            id="goals"
+            class="task-list"
+        ></ul>
+
+
+        <!-- ADD GOAL -->
+
+        <div class="add-task-box">
+
+            <input
+                type="text"
+                id="new-goal"
+                placeholder="What is your goal?"
+            >
+
+
+            <div class="task-input-row">
+
+                <input
+                    type="text"
+                    id="goal-notes"
+                    placeholder="Add a note..."
+                >
+
+
+                <button id="add-goal">
+                    + Add
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
